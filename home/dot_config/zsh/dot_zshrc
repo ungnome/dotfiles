@@ -1,0 +1,11 @@
+eval "$(/usr/local/bin/brew shellenv)"
+eval "$(starship init zsh)"
+
+# load aliases
+source $ZDOTDIR/aliases.zsh
+
+# load completions
+source $ZDOTDIR/completion.zsh
+
+# must be last
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

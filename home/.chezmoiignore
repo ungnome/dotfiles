@@ -1,0 +1,13 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# zsh stuff
+**/.zcompdump
+**/.zsh_history
+**/*.zwc
+
+# Homebrew
+**/Brewfile.*.lock.json

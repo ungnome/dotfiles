@@ -1,0 +1,15 @@
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export SPACESHIP_CONFIG="$XDG_CONFIG_HOME/spaceship/spaceship.zsh"
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+
+export EDITOR=vim
+export VISUAL=vim
+export PAGER=less
+
+export PATH="/usr/local/sbin:$PATH"
+
