@@ -1,6 +1,7 @@
 require("ungnome.core.options")
 require("ungnome.core.keymaps")
 require("ungnome.core.autocmds")
+require("ungnome.core.filetypes")
 
 -- init lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
