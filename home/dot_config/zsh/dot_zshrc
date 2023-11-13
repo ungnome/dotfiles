@@ -1,5 +1,10 @@
+# random stuff for mac and prompt
 eval "$(/usr/local/bin/brew shellenv)"
 eval "$(starship init zsh)"
+
+# history search
+bindkey "^R" history-incremental-search-backward 
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 
 # load aliases
 source $ZDOTDIR/aliases.zsh
