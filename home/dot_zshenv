@@ -9,7 +9,7 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 export EDITOR=vim
 export VISUAL=vim
-export PAGER=less
+export PAGER='less -r'
 
 export PATH="/usr/local/sbin:$PATH"
 
