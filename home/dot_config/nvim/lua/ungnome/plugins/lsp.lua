@@ -62,6 +62,7 @@ return {
         "stylua",
         "shfmt",
         "gopls",
+        "emmet-language-server",
       },
     })
 
