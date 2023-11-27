@@ -17,7 +17,8 @@ return {
         terraform = { require("formatter.filetypes.terraform").terraformfmt },
         html = { require("formatter.filetypes.html").prettierd },
         sh = { require("formatter.filetypes.sh").shfmt },
-        go = { require("formatter.filetypes.go").gofmt }
+        go = { require("formatter.filetypes.go").gofmt },
+        markdown = { require("formatter.defaults").prettierd },
       },
     })
   end,
