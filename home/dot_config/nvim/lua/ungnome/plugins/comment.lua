@@ -1,8 +1,8 @@
 -- https://github.com/numToStr/Comment.nvim
 
 return {
-  enabled = false,
+  enabled = true,
   "numToStr/Comment.nvim",
   event = { "BufReadPre", "BufNewFile" },
-  lazy = true,
+  opts = {},
 }

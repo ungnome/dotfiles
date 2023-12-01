@@ -14,7 +14,7 @@ return {
       build = ":MasonUpdate",
       opts = {
         ui = {
-          border = "single",
+         border = "single",
         },
       },
     },
