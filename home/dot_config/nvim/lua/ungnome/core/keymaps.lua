@@ -49,38 +49,38 @@ map("n", "<leader>ff", ":Telescope find_files<cr>", { desc = "Find Files (cwd)",
 -- code
 map("n", "<leader>cf", ":Format<cr>", { desc = "Format Buffer", silent = true })
 map(
-  "n",
-  "<leader>cs",
-  ":Telescope lsp_document_symbols<cr>",
-  { desc = "Buffer Symbols", silent = true }
+	"n",
+	"<leader>cs",
+	":Telescope lsp_document_symbols<cr>",
+	{ desc = "Buffer Symbols", silent = true }
 )
 map(
-  "n",
-  "<leader>cd",
-  ":TroubleToggle document_diagnostics<CR>",
-  { desc = "Code Diagnostics (Buffer)", silent = true }
+	"n",
+	"<leader>cd",
+	":TroubleToggle document_diagnostics<CR>",
+	{ desc = "Code Diagnostics (Buffer)", silent = true }
 )
 map(
-  "n",
-  "<leader>cD",
-  ":TroubleToggle workspace_diagnostics<CR>",
-  { desc = "Code Diagnostics (Workspace)", silent = true }
+	"n",
+	"<leader>cD",
+	":TroubleToggle workspace_diagnostics<CR>",
+	{ desc = "Code Diagnostics (Workspace)", silent = true }
 )
 map("n", "<leader>cr", ":lua vim.lsp.buf.rename()<CR>", { desc = "Rename", silent = true })
 map(
-  "n",
-  "<leader>ca",
-  ":lua vim.lsp.buf.code_action()<CR>",
-  { desc = "Code Actions", silent = true }
+	"n",
+	"<leader>ca",
+	":lua vim.lsp.buf.code_action()<CR>",
+	{ desc = "Code Actions", silent = true }
 )
 
 -- buffers
 map("n", "<leader>bd", ":bd<cr>", { desc = "Close Buffer", silent = true })
 map(
-  "n",
-  "<leader>bw",
-  ":bw<cr>",
-  { desc = "Close Buffer without Saving (careful with this one!)", silent = true }
+	"n",
+	"<leader>bw",
+	":bw<cr>",
+	{ desc = "Close Buffer without Saving (careful with this one!)", silent = true }
 )
 map("n", "<leader>bs", ":Telescope buffers<cr>", { desc = "Switch Buffers", silent = true })
 
@@ -89,9 +89,9 @@ map("n", "<leader>sg", ":Telescope live_grep<cr>", { desc = "Live Grep", silent 
 
 -- UI
 map("n", "<leader>un", "", {
-  desc = "Notification History",
-  silent = true,
-  callback = function()
-    require("telescope").extensions.notify.notify({ layout_strategy = "vertical" })
-  end,
+	desc = "Notification History",
+	silent = true,
+	callback = function()
+		require("telescope").extensions.notify.notify({ layout_strategy = "vertical" })
+	end,
 })
