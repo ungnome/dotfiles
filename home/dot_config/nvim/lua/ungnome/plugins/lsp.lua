@@ -14,7 +14,7 @@ return {
       build = ":MasonUpdate",
       opts = {
         ui = {
-         border = "single",
+          border = "single",
         },
       },
     },
@@ -43,6 +43,10 @@ return {
     local lspconfig = require("lspconfig")
 
     require("mason-tool-installer").setup({
+      auto_update = true,
+      run_on_start = true,
+      start_delay = 0,
+      debounce_hours = nil,
       ensure_installed = {
         "typescript-language-server",
         "terraform-ls",
@@ -65,8 +69,6 @@ return {
         "emmet-language-server",
       },
     })
-
-    vim.api.nvim_command(":MasonToolsUpdate")
 
     -- configure lsp server's settings
     lspconfig.yamlls.setup({
