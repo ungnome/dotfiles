@@ -94,7 +94,7 @@ return {
 				documentation = cmp.config.window.bordered(),
 			},
 			mapping = {
-				["<CR>"] = cmp.mapping.confirm({ select = true }),
+				-- ["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<C-Space>"] = cmp.mapping.complete(),
 			},
 		})
