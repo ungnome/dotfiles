@@ -5,7 +5,7 @@ return {
 	build = ":TSUpdate",
 	event = { "BufReadPost", "BufNewFile" },
 	dependencies = {
-		"JoosepAlviste/nvim-ts-context-commentstring",
+		"windwp/nvim-ts-autotag",
 	},
 	opts = {
 		highlight = { enable = true },
@@ -34,6 +34,9 @@ return {
 			"vim",
 			"vue",
 			"yaml",
+		},
+		autotag = {
+			enable = true,
 		},
 	},
 	config = function(_, opts)

@@ -5,9 +5,6 @@ return {
 	name = "mini",
 	version = false,
 	event = { "BufReadPre", "BufNewFile" },
-	-- dependencies = {
-	--   "JoosepAlviste/nvim-ts-context-commentstring",
-	-- },
 	config = function()
 		require("mini.indentscope").setup({
 			symbol = "│",
