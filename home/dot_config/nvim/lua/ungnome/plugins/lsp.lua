@@ -4,6 +4,23 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	cmd = "Mason",
 	branch = "v2.x",
+	keys = {
+		{ "<leader>m", ":Mason<cr>", mode = "n", desc = "Mason", silent = true },
+		{
+			"<leader>ca",
+			":lua vim.lsp.buf.code_action()<cr>",
+			mode = "n",
+			desc = "Code Actions",
+			silent = true,
+		},
+		{
+			"<leader>cr",
+			":lua vim.lsp.buf.rename()<cr>",
+			mode = "n",
+			desc = "Rename",
+			silent = true,
+		},
+	},
 	dependencies = {
 		-- LSP Support
 		{ "neovim/nvim-lspconfig" },

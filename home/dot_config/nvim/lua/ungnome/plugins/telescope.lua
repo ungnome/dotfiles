@@ -5,6 +5,43 @@ return {
 	lazy = false,
 	name = "telescope",
 	cmd = "Telescope",
+	keys = {
+		{
+			"<leader>fg",
+			":Telescope git_files<cr>",
+			mode = "n",
+			desc = "Fine Files (git)",
+			silent = true,
+		},
+		{
+			"<leader>ff",
+			":Telescope find_files<cr>",
+			mode = "n",
+			desc = "Find Files (cwd)",
+			silent = true,
+		},
+		{
+			"<leader>cs",
+			":Telescop lsp_document_symbols<cr>",
+			mode = "n",
+			desc = "Buffer Symbols",
+			silent = true,
+		},
+		{
+			"<leader>sg",
+			":Telescope live_grep<cr>",
+			mode = "n",
+			desc = "Live Grep",
+			silent = true,
+		},
+		{
+			"<leader>bs",
+			":Telescope buffers<cr>",
+			mode = "n",
+			desc = "Switch Buffers",
+			silent = true,
+		},
+	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -15,6 +52,11 @@ return {
 			layout_config = {
 				vertical = { width = 0.99 },
 				horizontal = { width = 0.99 },
+			},
+		},
+		pickers = {
+			find_files = {
+				find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 			},
 		},
 		extensions = {

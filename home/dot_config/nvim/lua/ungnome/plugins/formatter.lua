@@ -2,6 +2,15 @@
 return {
 	"mhartington/formatter.nvim",
 	event = { "BufReadPre", "BufNewFile" },
+	keys = {
+		{
+			"<leader>cf",
+			":Format<cr>",
+			mode = "n",
+			desc = "Format Buffer",
+			silent = true,
+		},
+	},
 	config = function()
 		require("formatter").setup({
 			logging = true,

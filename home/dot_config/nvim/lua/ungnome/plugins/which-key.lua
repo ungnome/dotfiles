@@ -12,10 +12,9 @@ return {
 			["<leader>b"] = "Buffers",
 			["<leader>c"] = "Code",
 			["<leader>f"] = "File",
-			["<leader>q"] = "Quit",
 			["<leader>s"] = "Search",
-			["<leader>u"] = "UI",
 			["<leader>w"] = "Window",
+			['<leader>v'] = 'Vim'
 		}
 
 		-- add custom menu items to which-key
