@@ -25,6 +25,7 @@ return {
 				toml = { require("formatter.filetypes.toml").taplo },
 				terraform = { require("formatter.filetypes.terraform").terraformfmt },
 				html = { require("formatter.filetypes.html").prettierd },
+				css = { require("formatter.filetypes.css").prettierd },
 				sh = { require("formatter.filetypes.sh").shfmt },
 				go = { require("formatter.filetypes.go").gofmt },
 				markdown = { require("formatter.defaults").prettierd },

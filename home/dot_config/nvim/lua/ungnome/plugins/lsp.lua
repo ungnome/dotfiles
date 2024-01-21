@@ -76,7 +76,6 @@ return {
 				"yaml-language-server",
 				"marksman",
 				"pyright",
-				"tailwindcss-language-server",
 				"taplo",
 				"prettierd",
 				"eslint_d",
