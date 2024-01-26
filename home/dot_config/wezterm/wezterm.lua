@@ -43,7 +43,11 @@ return {
 		{ key = "c", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
 		{ key = "v", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
 		{ key = "{", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
+		{ key = "{", mods = "SUPER|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
 		{ key = "}", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
+		{ key = "}", mods = "SUPER|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
 		{ key = "X", mods = "CTRL|SHIFT", action = wezterm.action.ActivateCopyMode },
+		{ key = "t", mods = "SUPER", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
+		{ key = "t", mods = "CTRL|SHIFT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
 	},
 }
