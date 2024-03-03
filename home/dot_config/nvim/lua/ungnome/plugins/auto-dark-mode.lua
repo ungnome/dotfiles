@@ -1,7 +1,7 @@
 -- https://github.com/f-person/auto-dark-mode.nvim
 
 return {
-	enabled = true,
+	enabled = false,
 	event = "VeryLazy",
 	"f-person/auto-dark-mode.nvim",
 	opts = {
