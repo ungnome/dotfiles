@@ -7,8 +7,8 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export SPACESHIP_CONFIG="$XDG_CONFIG_HOME/spaceship/spaceship.zsh"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 export PAGER='less -r'
 
 export PATH="/usr/local/sbin:$PATH"
