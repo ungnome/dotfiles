@@ -9,7 +9,6 @@ alias lt="ls --tree"
 # dotfiles
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
-
 ## Exports
 # aws-vault keychain name
 export AWS_VAULT_KEYCHAIN_NAME="login"
@@ -21,7 +20,6 @@ export PAGER=less
 
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
-
 
 # PS1=$'\
 # \e[1;34m\w\e[0m\
@@ -37,7 +35,6 @@ _RED=$(tput setaf 1)
 PS0="\n"
 PS1="\n\[${_BOLD}${_BLUE}\]\w\n\[${_RESET}\]\[${_BOLD}${_RED}\]\$\[${_RESET}\]: "
 
-
 if [ -f ~/.bashrc.local ]; then
-  source ~/.bashrc.local
+	source ~/.bashrc.local
 fi
