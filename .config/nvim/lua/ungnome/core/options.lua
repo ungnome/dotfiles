@@ -22,6 +22,7 @@ opt.scrolloff = 10
 opt.sidescrolloff = 10
 opt.wrap = false
 opt.signcolumn = "yes"
+opt.listchars = "space:·,tab:>-"
 
 -- enable truecolor support
 opt.termguicolors = true
