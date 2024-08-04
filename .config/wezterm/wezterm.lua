@@ -9,8 +9,8 @@ local function scheme_for_appearance(appearance)
 	end
 end
 
--- config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+-- config.color_scheme = "Catppuccin Mocha"
 config.scrollback_lines = 10000
 config.audible_bell = "Disabled"
 config.initial_rows = 40

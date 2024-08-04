@@ -32,7 +32,7 @@ _GREEN=$(tput setaf 2)
 _BLUE=$(tput setaf 4)
 _RED=$(tput setaf 1)
 
-PS0="\n"
+# PS0="\n"
 PS1="\n\[${_BOLD}${_BLUE}\]\w\n\[${_RESET}\]\[${_BOLD}${_RED}\]\$\[${_RESET}\]: "
 
 if [ -f ~/.bashrc.local ]; then
