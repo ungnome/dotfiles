@@ -1,9 +1,9 @@
-# ls -> exa
-alias ls="exa --icons"
-alias ll="exa --icons -lh"
-alias l="exa --icons -lh"
-alias la="exa --icons -lah"
-alias ldf="exa --icons -lhd .*"
+# ls -> eza
+alias ls="eza --icons"
+alias ll="eza --icons -lh"
+alias l="eza --icons -lh"
+alias la="eza --icons -lah"
+alias ldf="eza --icons -lhd .*"
 alias lt="ls --tree"
 
 # dotfiles
