@@ -1,6 +1,7 @@
 -- https://github.com/echasnovski/mini.nvim
 
 return {
+	enabled = false,
 	"echasnovski/mini.nvim",
 	name = "mini",
 	version = false,
@@ -9,4 +10,3 @@ return {
 		require("mini.surround").setup()
 	end,
 }
-
