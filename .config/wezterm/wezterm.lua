@@ -10,7 +10,6 @@ local function scheme_for_appearance(appearance)
 end
 
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
--- config.color_scheme = "Catppuccin Mocha"
 config.scrollback_lines = 10000
 config.audible_bell = "Disabled"
 config.initial_rows = 40
@@ -21,7 +20,7 @@ config.native_macos_fullscreen_mode = true
 config.font_size = 16.0
 config.font = wezterm.font({
 	family = "JetBrains Mono",
-	weight = "DemiBold",
+	weight = "Medium",
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })
 

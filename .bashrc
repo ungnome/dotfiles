@@ -26,15 +26,18 @@ export PATH="/usr/local/sbin:$PATH"
 # \e[1;31m\$\e[m: \
 # '
 
-_BOLD=$(tput bold)
-_RESET=$(tput sgr0)
-_GREEN=$(tput setaf 2)
-_BLUE=$(tput setaf 4)
-_RED=$(tput setaf 1)
+# _BOLD=$(tput bold)
+# _RESET=$(tput sgr0)
+# _GREEN=$(tput setaf 2)
+# _BLUE=$(tput setaf 4)
+# _RED=$(tput setaf 1)
+#
+# # PS0="\n"
+# PS1="\n\[${_BOLD}${_BLUE}\]\w\n\[${_RESET}\]\[${_BOLD}${_RED}\]\$\[${_RESET}\]: "
+#
+# if [ -f ~/.bashrc.local ]; then
+# 	source ~/.bashrc.local
+# fi
 
-# PS0="\n"
-PS1="\n\[${_BOLD}${_BLUE}\]\w\n\[${_RESET}\]\[${_BOLD}${_RED}\]\$\[${_RESET}\]: "
 
-if [ -f ~/.bashrc.local ]; then
-	source ~/.bashrc.local
-fi
+eval "$(starship init bash)"
