@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 local function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "Catppuccin Macchiato"
+		return "Catppuccin Mocha"
 	else
 		return "Catppuccin Latte"
 	end
