@@ -6,19 +6,12 @@ return {
 		local which_key = require("which-key")
 		which_key.setup()
 
-		-- define keymaps
-		local menu = {
-			mode = { "n" },
-			["<leader>b"] = "+Buffers",
-			["<leader>c"] = "+Code",
-			["<leader>f"] = "+File",
-			["<leader>s"] = "+Search",
-			["<leader>w"] = "+Window",
-			['<leader>v'] = '+Vim'
-		}
-
-		-- add custom menu items to which-key
-		which_key.register(menu)
+		which_key.add({
+			{ "<leader>b", desc = "+Buffers" },
+			{ "<leader>c", desc = "+Code" },
+			{ "<leader>f", desc = "+File" },
+			{ "<leader>s", desc = "+Search" },
+			{ "<leader>v", desc = "+Vim" },
+		})
 	end,
 }
-

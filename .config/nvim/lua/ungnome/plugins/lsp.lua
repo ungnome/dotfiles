@@ -18,7 +18,7 @@ return {
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 			ensure_installed = {
 				"lua_ls",
-				"tsserver",
+				"ts_ls",
 				"svelte",
 				"bashls",
 				"html",

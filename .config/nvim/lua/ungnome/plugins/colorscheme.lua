@@ -12,7 +12,12 @@ return {
 		flavour = "mocha",
 		background = {
 			light = "latte",
-			dark = "mocchiato",
+			dark = "mocha",
+		},
+		dim_inactive = {
+			enable = true,
+			shade = "dark",
+			percentage = 0.30,
 		},
 		show_end_of_buffer = true,
 		integrations = {
@@ -21,7 +26,6 @@ return {
 			gitsigns = true,
 			telescope = true,
 			mason = true,
-			mini = true,
 			which_key = true,
 			lsp_trouble = true,
 		},
@@ -29,6 +33,7 @@ return {
 			return {
 				Comment = { fg = colors.overlay1 },
 				LineNr = { fg = colors.overlay1 },
+				["@tag.attribute"] = { fg = colors.yellow },
 			}
 		end,
 	},
@@ -41,7 +46,7 @@ return {
 			update_interval = 1000,
 			set_dark_mode = function()
 				vim.api.nvim_set_option("background", "dark")
-				vim.cmd("colorscheme catppuccin-macchiato")
+				vim.cmd("colorscheme catppuccin-mocha")
 			end,
 			set_light_mode = function()
 				vim.api.nvim_set_option("background", "light")
