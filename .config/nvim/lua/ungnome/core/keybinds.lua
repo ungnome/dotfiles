@@ -27,19 +27,8 @@ map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 
--- Windows
-map("n", "<leader>wv", ":vsplit<cr>", { desc = "Split Window Vertically", silent = true })
-map("n", "<leader>wh", ":split<cr>", { desc = "Split Window Horizontally", silent = true })
-
 -- lazy
 map("n", "<leader>l", "<cmd>:Lazy<cr>", { desc = "Lazy", silent = true })
-
--- file explorer
-map("n", "<leader>fe", ":Ex<cr>", { desc = "File Explorer", silent = true })
-
--- buffers
-map("n", "<leader>bd", ":bd<cr>", { desc = "Delete Buffer", silent = true })
-map("n", "<leader>bD", ":bd!<cr>", { desc = "Delete Buffer (Force)", silent = true })
 
 -- messages
 map("n", "<leader>vm", ":enew|pu=execute('message')<cr>", { desc = "Messages", silent = true })

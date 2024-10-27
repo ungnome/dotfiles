@@ -24,3 +24,8 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = "*.sls",
 	command = "set ft=salt expandtab shiftwidth=2 tabstop=2",
 })
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = "*.tf",
+	command = "setlocal commentstring=#%s",
+})

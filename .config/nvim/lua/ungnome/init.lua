@@ -19,14 +19,14 @@ vim.opt.rtp:prepend(lazypath)
 -- load lazy.nvim
 require("lazy").setup("ungnome.plugins", {
 	defaults = {
-		lazy = true,
+		-- lazy = true,
 		version = "*", -- default to latest stable version of plugins
 	},
 	install = {
 		missing = true,
 	},
 	ui = {
-		border = "single",
+		border = "rounded",
 	},
 })
 
