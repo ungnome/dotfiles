@@ -25,7 +25,7 @@ opt.signcolumn = "yes"
 opt.listchars = "space:·,tab:>-"
 
 -- enable truecolor support
-opt.termguicolors = true
+-- opt.termguicolors = true
 
 -- completion menu
 opt.completeopt = "menu,menuone,preview,noinsert"

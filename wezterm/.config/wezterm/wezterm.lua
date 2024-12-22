@@ -2,6 +2,15 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+-- functions
+local function get_color_scheme(appearance)
+	if appearance:find 'Dark' then
+		return "Catppuccin Mocha"
+	else
+		return "Catppuccin Latte"
+	end
+end
+
 -- window junk
 config.scrollback_lines = 10000
 config.audible_bell = "Disabled"
@@ -9,10 +18,11 @@ config.initial_rows = 40
 config.initial_cols = 140
 
 -- theme junk
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = get_color_scheme(wezterm.gui.get_appearance())
 
 -- tabs junk
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 
@@ -20,7 +30,7 @@ config.use_fancy_tab_bar = false
 config.native_macos_fullscreen_mode = true
 
 -- font junk
-config.font_size = 15.0
+config.font_size = 16.0
 config.font = wezterm.font({
 	family = "Hack",
 })

@@ -1,14 +1,17 @@
 return {
 	"catppuccin/nvim",
+	tag = "stable",
 	name = "catppuccin",
 	enabled = true,
+	lazy = false,
 	priority = 1000,
-	opts = {
-		flavour = "mocha",
+	opt = {
+		flavour = "auto",
 		background = {
 			light = "latte",
 			dark = "mocha",
 		},
+		term_colorrs = true,
 		dim_inactive = {
 			enable = true,
 			shade = "dark",
@@ -32,9 +35,7 @@ return {
 			}
 		end,
 	},
-	config = function(_, opts)
-		require("catppuccin").setup(opts)
+	config = function()
 		vim.cmd("colorscheme catppuccin")
 	end,
 }
-
