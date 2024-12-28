@@ -1,0 +1,7 @@
+font-size = 15
+font-family = "Hack"
+
+theme = catppuccin-mocha
+
+window-width = 115
+window-height = 50
