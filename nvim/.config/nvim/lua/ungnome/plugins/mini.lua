@@ -2,6 +2,15 @@ return {
 	"echasnovski/mini.nvim",
 	version = false,
 	event = { "BufReadPre", "BufNewFile" },
+	dependencies = {
+		{
+			-- this is for handling multi-language files, such as svelte/vue sfc
+			"JoosepAlviste/nvim-ts-context-commentstring",
+			opts = {
+				enable_autocmd = false,
+			},
+		},
+	},
 	config = function()
 		require("mini.surround").setup({
 			custom_surroundings = {
@@ -19,6 +28,12 @@ return {
 		})
 
 		require("mini.pairs").setup()
-		require("mini.comment").setup()
+		require("mini.comment").setup({
+			options = {
+				custom_commentstring = function()
+					return require("ts_context_commentstring").calculate_commentstring() or vim.bo.commentstring
+				end,
+			},
+		})
 	end,
 }
