@@ -4,9 +4,8 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		{
-			-- this is for handling multi-language files, such as svelte/vue sfc
 			"JoosepAlviste/nvim-ts-context-commentstring",
-			opts = {
+			opt = {
 				enable_autocmd = false,
 			},
 		},

@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local opt = vim.opt
+local global = vim.g
 
 -- indent
 opt.autoindent = true
@@ -46,3 +47,4 @@ opt.splitkeep = "screen"
 
 -- misc
 opt.shortmess:append({ C = true })
+global.skip_ts_context_commentstring_module = true
