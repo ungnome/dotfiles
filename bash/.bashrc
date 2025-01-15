@@ -4,6 +4,7 @@ alias ll="ls -lh"
 alias la="ls -lah"
 alias ldf="ls -lhd .*"
 alias lt="ls --tree"
+alias vim="nvim"
 
 # preferred editor and pager
 export VISUAL=nvim
