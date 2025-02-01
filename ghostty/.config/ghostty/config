@@ -1,7 +1,11 @@
-font-size = 15
+font-size = 14
 font-family = "Hack"
+font-thicken = true
 
-theme = catppuccin-mocha
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+
+title = " "
+macos-titlebar-proxy-icon = "hidden"
 
 window-width = 115
 window-height = 50
