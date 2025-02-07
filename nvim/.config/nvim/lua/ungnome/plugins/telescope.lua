@@ -48,10 +48,12 @@ return {
 	opts = {
 		defaults = {
 			initial_mode = "insert",
-			layout_config = {
-				vertical = { width = 0.99 },
-				horizontal = { width = 0.99 },
-			},
+			layout_strategy = "horizontal",
+			-- layout_config = {
+			-- 	horizontal = {
+			-- 		preview_width = { 0.5, max = 100 },
+			-- 	},
+			-- },
 		},
 		pickers = {
 			find_files = {
