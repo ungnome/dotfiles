@@ -11,5 +11,4 @@ window-height = 50
 
 
 # platform specific configs
-config-file = ?../ghostty-mac/config
-config-file = ?../ghostty-linux/config
+config-file = ?./config.local
