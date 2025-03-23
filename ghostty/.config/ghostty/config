@@ -6,7 +6,7 @@ font-thicken = true
 theme = dark:catppuccin-mocha,light:catppuccin-latte
 
 # window 
-window-width = 115
+window-width = 145
 window-height = 50
 
 
