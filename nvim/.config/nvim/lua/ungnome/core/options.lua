@@ -10,6 +10,7 @@ opt.smartindent = true
 opt.shiftwidth = 4
 opt.shiftround = true
 opt.tabstop = 4
+opt.expandtab = true
 
 -- cursor and position indicators
 opt.cursorline = true

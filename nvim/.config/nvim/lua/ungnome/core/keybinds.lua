@@ -32,4 +32,3 @@ map("n", "<leader>l", "<cmd>:Lazy<cr>", { desc = "Lazy", silent = true })
 
 -- messages
 map("n", "<leader>vm", ":enew|pu=execute('message')<cr>", { desc = "Messages", silent = true })
-
