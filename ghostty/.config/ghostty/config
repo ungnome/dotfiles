@@ -3,11 +3,14 @@ font-family = "Hack"
 font-thicken = true
 
 # theme
-theme = dark:catppuccin-mocha,light:catppuccin-latte
+theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
 
 # window 
 window-width = 145
 window-height = 50
+
+# tweaks
+shell-integration-features = no-cursor
 
 
 # platform specific configs
