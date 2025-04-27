@@ -57,11 +57,11 @@ preset = 'qwerty'
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 10
-inner.vertical =   10
-outer.left =       10
-outer.bottom =     10
-outer.top =        10
-outer.right =      10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -194,7 +194,10 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+    'layout floating tiling',
+    'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
@@ -210,84 +213,88 @@ alt-shift-l = ['join-with right', 'mode main']
 # 1 - terminal
 #############################
 [[on-window-detected]]
-if.app-id='com.mitchellh.ghostty'
-run = [ 'layout floating', 'move-node-to-workspace 1' ]
+if.app-id = 'com.mitchellh.ghostty'
+run = ['layout floating', 'move-node-to-workspace 1']
 
 ##############################
 # 2 - web browsers
 ##############################
 [[on-window-detected]]
-if.app-id="org.mozilla.firefox"
+if.app-id = "org.mozilla.firefox"
 run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
-if.app-id="com.apple.Safari"
+if.app-id = "com.apple.Safari"
 run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
-if.app-id="com.vivaldi.Vivaldi"
+if.app-id = "com.vivaldi.Vivaldi"
 run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
-if.app-id="com.brave.Browser"
+if.app-id = "com.brave.Browser"
 run = ['move-node-to-workspace 2']
 
 ##############################
 # 3 - messaging apps
 ##############################
 [[on-window-detected]]
-if.app-id="org.whispersystems.signal-desktop"
+if.app-id = "org.whispersystems.signal-desktop"
 run = ['layout floating', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
-if.app-id="com.apple.MobileSMS"
+if.app-id = "com.apple.MobileSMS"
 run = ['layout floating', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
-if.app-id="com.hnc.Discord"
+if.app-id = "com.hnc.Discord"
 run = ['move-node-to-workspace 3']
 
 ##############################
 # 4 - email, calendar
 ##############################
 [[on-window-detected]]
-if.app-id="com.apple.mail"
+if.app-id = "com.apple.mail"
 run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]
-if.app-id="com.apple.iCal"
+if.app-id = "com.apple.iCal"
 run = ['move-node-to-workspace 4']
 
 ##############################
 # 5 - notes
 ##############################
 [[on-window-detected]]
-if.app-id="md.obsidian"
+if.app-id = "md.obsidian"
 run = ['move-node-to-workspace 5']
 
 ##############################
 # always aloating
 ##############################
 [[on-window-detected]]
-if.app-id="com.tidal.desktop"
+if.app-id = "com.tidal.desktop"
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id="com.apple.finder"
+if.app-id = "com.electron.pocket-casts"
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id="com.apple.AddressBook"
+if.app-id = "com.apple.finder"
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id="com.todoist.mac.Todoist"
+if.app-id = "com.apple.AddressBook"
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id="com.bitwarden.desktop"
+if.app-id = "com.todoist.mac.Todoist"
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id="org.godotengine.godot"
+if.app-id = "com.bitwarden.desktop"
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = "org.godotengine.godot"
 run = ['layout floating']
