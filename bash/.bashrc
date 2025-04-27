@@ -1,4 +1,14 @@
-# --------------------- ls colors --------------------- #
+# ---------- source global definitions ---------- #
+[ -f /etc/bashrc ] && . /etc/bashrc
+
+# ---------- PATH ---------- #
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+
+export PATH
+
+# ---------- ls colors ----------  #
 if [ $(uname) == "Darwin" ]; then
 	export CLICOLOR=1
 	export LSCOLORS=exfxcddxcxgxdxabagacad
@@ -7,20 +17,23 @@ else
 	export LS_COLORS
 fi
 
-# --------------------- editor and pager --------------------- #
+# ---------- editor and pager ---------- #
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export PAGER=less
 
-# --------------------- homebrew --------------------- #
+# ---------- systemd ---------- #
+export SYSTEMD_PAGER=
+
+# ---------- homebrew ---------- #
 if [ $(uname) == "Darwin" ]; then
 	export PATH="/usr/local/sbin:$PATH"
 fi
 
-# --------------------- completion --------------------- #
+# ---------- completion ---------- #
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-# --------------------- prompt --------------------- #
+# ---------- prompt ---------- #
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 __get_prompt() {
@@ -42,7 +55,7 @@ __get_prompt() {
 
 PROMPT_COMMAND=__get_prompt
 
-# --------------------- local machine customization --------------------- #
+# ---------- local machine customization ---------- #
 if [ -a ~/.bashrc.local ]; then
 	source ~/.bashrc.local
 fi

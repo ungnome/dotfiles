@@ -1,5 +1,6 @@
 ### local only ###
 ghostty/**/*.local
+btop.log
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,windows
