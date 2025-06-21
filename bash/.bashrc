@@ -50,7 +50,7 @@ __get_prompt() {
 
 	[ $git_repo ] && local git_prompt=" ($git_repo: $git_branch)"
 
-	PS1="\n[${blue}\u@\h${reset}]${yellow}${python_env}${red}${git_prompt}${reset}\n\$ "
+	PS1="\n[${blue}\u@\h${reset}]${yellow}${python_env}${red}${git_prompt}${reset}\n\$${reset} "
 }
 
 PROMPT_COMMAND=__get_prompt
