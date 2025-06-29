@@ -1,7 +1,3 @@
-require("ungnome.core.options")
-require("ungnome.core.keybinds")
-require("ungnome.core.autocmds")
-
 -- init lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -17,7 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- load lazy.nvim
-require("lazy").setup("ungnome.plugins", {
+require("lazy").setup("plugins", {
     defaults = {
         -- lazy = true,
         version = "*", -- default to latest stable version of plugins

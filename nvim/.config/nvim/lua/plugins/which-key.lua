@@ -4,14 +4,17 @@ return {
     config = function()
         -- setup which-key
         local which_key = require("which-key")
-        which_key.setup()
+        which_key.setup({
+            preset = "helix",
+            icons = {
+                mappings = false,
+            },
+        })
 
         which_key.add({
-            { "<leader>b", desc = "+Buffers" },
-            { "<leader>c", desc = "+Code" },
-            { "<leader>f", desc = "+File" },
+            { "<leader>f", desc = "+Find" },
+            { "<leader>g", desc = "+Git" },
             { "<leader>s", desc = "+Search" },
-            { "<leader>v", desc = "+Vim" },
         })
     end,
 }
