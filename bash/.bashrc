@@ -1,14 +1,20 @@
-# ---------- source global definitions ---------- #
+# ------------------------------------------------------------------------------
+# source global definitions
+# ------------------------------------------------------------------------------
 [ -f /etc/bashrc ] && . /etc/bashrc
 
-# ---------- PATH ---------- #
+# ------------------------------------------------------------------------------
+# $PATH
+# ------------------------------------------------------------------------------
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 
 export PATH
 
-# ---------- ls colors ----------  #
+# ------------------------------------------------------------------------------
+# ls colors
+# ------------------------------------------------------------------------------
 if [ $(uname) == "Darwin" ]; then
 	export CLICOLOR=1
 	export LSCOLORS=exfxcddxcxgxdxabagacad
@@ -17,45 +23,38 @@ else
 	export LS_COLORS
 fi
 
-# ---------- editor and pager ---------- #
+# ------------------------------------------------------------------------------
+# envars
+# ------------------------------------------------------------------------------
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export PAGER=less
 
-# ---------- systemd ---------- #
+# ------------------------------------------------------------------------------
+# systemd
+# ------------------------------------------------------------------------------
 export SYSTEMD_PAGER=
 
-# ---------- homebrew ---------- #
+# ------------------------------------------------------------------------------
+# homebrew
+# ------------------------------------------------------------------------------
 if [ $(uname) == "Darwin" ]; then
 	export PATH="/usr/local/sbin:$PATH"
 fi
 
-# ---------- completion ---------- #
+# ------------------------------------------------------------------------------
+# completion
+# ------------------------------------------------------------------------------
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-# ---------- prompt ---------- #
-export VIRTUAL_ENV_DISABLE_PROMPT="true"
-
-__get_prompt() {
-	local blue="\e[34m"
-	local green="\e[32m"
-	local red="\e[31m"
-	local yellow="\e[33m"
-	local reset="\e[0m" # no color
-
-	local python_env=$(test $VIRTUAL_ENV_PROMPT && echo " $(VIRTUAL_ENV_PROMPT)" || echo "")
-	local git_repo=$(basename $(git rev-parse --show-toplevel 2>/dev/null) 2>/dev/null)
-	local git_branch=$(git branch --show-current 2>/dev/null)
-	local git_prompt=""
-
-	[ $git_repo ] && local git_prompt=" ($git_repo: $git_branch)"
-
-	PS1="\n[${blue}\u@\h${reset}]${yellow}${python_env}${red}${git_prompt}${reset}\n\$${reset} "
-}
-
-PROMPT_COMMAND=__get_prompt
-
-# ---------- local machine customization ---------- #
+# ------------------------------------------------------------------------------
+# local machine customization
+# ------------------------------------------------------------------------------
 if [ -a ~/.bashrc.local ]; then
 	source ~/.bashrc.local
 fi
+
+# ------------------------------------------------------------------------------
+# prompt
+# ------------------------------------------------------------------------------
+eval "$(starship init bash)"
