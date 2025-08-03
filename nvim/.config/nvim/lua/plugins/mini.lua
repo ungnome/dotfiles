@@ -1,7 +1,6 @@
 return {
     "echasnovski/mini.nvim",
     version = false,
-    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         {
             "JoosepAlviste/nvim-ts-context-commentstring",
@@ -17,9 +16,7 @@ return {
                     input = { "<(%w+)[^<>]->.-</%1>", "^<()%w+().*</()%w+()>$" },
                     output = function()
                         local tag_name = MiniSurround.user_input("Tag name")
-                        if tag_name == nil then
-                            return nil
-                        end
+                        if tag_name == nil then return nil end
                         return { left = tag_name, right = tag_name }
                     end,
                 },
@@ -34,5 +31,13 @@ return {
                 end,
             },
         })
+
+        require("mini.notify").setup()
+        require("mini.icons").setup()
+        require("mini.pick").setup()
+        require("mini.extra").setup()
+
+        -- replace default select ui with MiniPick
+        vim.ui.select = MiniPick.ui_select
     end,
 }

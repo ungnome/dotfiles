@@ -5,7 +5,7 @@ return {
         -- setup which-key
         local which_key = require("which-key")
         which_key.setup({
-            preset = "helix",
+            preset = "modern",
             icons = {
                 mappings = false,
             },
@@ -15,6 +15,7 @@ return {
             { "<leader>f", desc = "+Find" },
             { "<leader>g", desc = "+Git" },
             { "<leader>s", desc = "+Search" },
+            { "<leader>x", desc = "+Misc" },
         })
     end,
 }

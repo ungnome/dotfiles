@@ -1,6 +1,7 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter
 
 return {
+    -- enabled = false,
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },

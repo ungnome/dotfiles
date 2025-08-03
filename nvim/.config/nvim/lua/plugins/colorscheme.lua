@@ -1,41 +1,45 @@
 return {
     "catppuccin/nvim",
-    tag = "stable",
     name = "catppuccin",
     enabled = true,
     lazy = false,
     priority = 1000,
-    opt = {
-        flavour = "auto",
-        background = {
-            light = "latte",
-            dark = "mocha",
-        },
-        term_colorrs = true,
-        dim_inactive = {
-            enable = true,
-            shade = "dark",
-            percentage = 0.30,
-        },
-        show_end_of_buffer = true,
-        integrations = {
-            treesitter = true,
-            cmp = true,
-            gitsigns = true,
-            telescope = true,
-            mason = true,
-            which_key = true,
-            lsp_trouble = true,
-        },
-        custom_highlights = function(colors)
-            return {
-                Comment = { fg = colors.overlay1 },
-                LineNr = { fg = colors.overlay1 },
-                ["@tag.attribute"] = { fg = colors.yellow },
-            }
-        end,
-    },
     config = function()
-        vim.cmd("colorscheme catppuccin")
+        require("catppuccin").setup({
+            flavour = "auto",
+            background = {
+                light = "latte",
+                dark = "mocha",
+            },
+            term_colorrs = true,
+            dim_inactive = {
+                enable = true,
+                shade = "dark",
+                percentage = 0.30,
+            },
+            show_end_of_buffer = true,
+            integrations = {
+                blink_cmp = true,
+                treesitter = true,
+                mason = true,
+                mini = true,
+                which_key = true,
+            },
+            custom_highlights = function(colors)
+                return {
+                    Comment = { fg = colors.overlay1 },
+                    LineNr = { fg = colors.overlay1 },
+                    ["@tag.attribute"] = { fg = colors.yellow },
+                    
+                    -- blink.cmp
+                    BlinkCmpMenu = { bg = colors.base },
+                    BlinkCmpMenuBorder = { bg = colors.base, fg = colors.blue },
+                    BlinkCmpDoc = { bg = colors.base },
+                    BlinkCmpDocBorder = { bg = colors.base, fg = colors.blue },
+                }
+            end,
+        })
+
+        vim.cmd.colorscheme("catppuccin")
     end,
 }

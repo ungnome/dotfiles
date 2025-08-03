@@ -1,0 +1,22 @@
+return {
+    cmd = { "emmet-language-server", "--stdio" },
+    capabilities = require("blink.cmp").get_lsp_capabilities(),
+    filetypes = {
+        "astro",
+        "css",
+        "eruby",
+        "html",
+        "htmlangular",
+        "htmldjango",
+        "javascriptreact",
+        "less",
+        "pug",
+        "sass",
+        "scss",
+        "svelte",
+        "templ",
+        "typescriptreact",
+        "vue",
+    },
+    root_markers = { ".git" },
+}

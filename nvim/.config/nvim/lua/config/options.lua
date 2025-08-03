@@ -1,8 +1,9 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 local opt = vim.opt
 local global = vim.g
+
+-- map leader to <space>
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- indent
 opt.autoindent = true
@@ -26,12 +27,8 @@ opt.wrap = false
 opt.signcolumn = "yes"
 opt.listchars = "space:·,tab:>-"
 
--- enable truecolor support
--- opt.termguicolors = true
-
 -- completion menu
 opt.completeopt = "menu,menuone,preview,noinsert"
-opt.pumheight = 10
 
 -- confirm changes before closing buffer
 opt.confirm = true
@@ -44,8 +41,8 @@ opt.spelllang = { "en" }
 -- split behavior
 opt.splitbelow = true
 opt.splitright = true
-opt.splitkeep = "screen"
 
 -- misc
 opt.shortmess:append({ C = true })
 global.skip_ts_context_commentstring_module = true
+opt.winborder = "rounded"
