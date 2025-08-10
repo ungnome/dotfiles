@@ -29,6 +29,7 @@ fi
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export PAGER=less
+export KITTY_HOST_OS=$(uname)
 
 # ------------------------------------------------------------------------------
 # systemd
@@ -45,7 +46,9 @@ fi
 # ------------------------------------------------------------------------------
 # completion
 # ------------------------------------------------------------------------------
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if [ $(uname) == "Darwin" ]; then
+    [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+fi
 
 # ------------------------------------------------------------------------------
 # local machine customization
@@ -58,3 +61,11 @@ fi
 # prompt
 # ------------------------------------------------------------------------------
 eval "$(starship init bash)"
+
+# pnpm
+export PNPM_HOME="/Users/voth/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
