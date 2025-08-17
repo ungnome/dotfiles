@@ -1,6 +1,5 @@
 return {
     cmd = { "svelteserver", "--stdio" },
-    capabilities = require('blink.cmp').get_lsp_capabilities(),
     filetypes = { "svelte" },
     root_dir = function(bufnr, on_dir)
         local root_files = { "package.json", ".git" }

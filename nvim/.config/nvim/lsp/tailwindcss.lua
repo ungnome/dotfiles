@@ -1,6 +1,5 @@
 return {
     cmd = { "tailwindcss-language-server", "--stdio" },
-    capabilities = require("blink.cmp").get_lsp_capabilities(),
     -- filetypes copied and adjusted from tailwindcss-intellisense
     filetypes = {
         -- html

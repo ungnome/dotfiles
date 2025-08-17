@@ -19,19 +19,24 @@ return {
             },
             show_end_of_buffer = true,
             integrations = {
-                blink_cmp = true,
+                blink_cmp = {
+                    style = "bordered",
+                },
                 treesitter = true,
                 mason = true,
                 mini = true,
                 which_key = true,
+                snacks = {
+                    enabled = true,
+                },
             },
             custom_highlights = function(colors)
                 return {
                     Comment = { fg = colors.overlay1 },
                     LineNr = { fg = colors.overlay1 },
                     ["@tag.attribute"] = { fg = colors.yellow },
-                    
-                    -- blink.cmp
+
+                    -- -- blink.cmp
                     BlinkCmpMenu = { bg = colors.base },
                     BlinkCmpMenuBorder = { bg = colors.base, fg = colors.blue },
                     BlinkCmpDoc = { bg = colors.base },

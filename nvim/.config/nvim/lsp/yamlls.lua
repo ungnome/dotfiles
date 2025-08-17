@@ -1,6 +1,5 @@
 return {
     cmd = { "yaml-language-server", "--stdio" },
-    capabilities = require("blink.cmp").get_lsp_capabilities(),
     filetypes = { "yaml", "yaml.docker-compose", "yaml.gitlab", "yaml.helm-values" },
     root_markers = { ".git" },
     settings = {

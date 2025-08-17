@@ -1,6 +1,5 @@
 return {
     cmd = { "typescript-language-server", "--stdio" },
-    capabilities = require('blink.cmp').get_lsp_capabilities(),
     filetypes = {
         "javascript",
         "javascriptreact",

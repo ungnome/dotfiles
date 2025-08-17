@@ -32,12 +32,15 @@ return {
             },
         })
 
-        require("mini.notify").setup()
         require("mini.icons").setup()
-        require("mini.pick").setup()
-        require("mini.extra").setup()
+        MiniIcons.mock_nvim_web_devicons()
 
-        -- replace default select ui with MiniPick
-        vim.ui.select = MiniPick.ui_select
+        require("mini.indentscope").setup({
+            symbol = "│",
+            draw = {
+                delay = 0,
+                animation = require("mini.indentscope").gen_animation.none(),
+            },
+        })
     end,
 }

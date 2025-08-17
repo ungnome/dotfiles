@@ -1,6 +1,5 @@
 return {
     cmd = { "bash-language-server", "start" },
-    capabilities = require('blink.cmp').get_lsp_capabilities(),
     settings = {
         bashIde = {
             -- Glob pattern for finding and parsing shell script files in the workspace.
