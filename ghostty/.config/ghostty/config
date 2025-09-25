@@ -3,15 +3,19 @@ font-family = "Hack"
 font-thicken = true
 
 # theme
-theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 
 # window 
 window-width = 145
 window-height = 50
+window-padding-x = 10
+window-padding-y = 5
 
 # tweaks
-shell-integration-features = no-cursor
-
+shell-integration-features = no-cursor,ssh-terminfo,ssh-env,sudo
+cursor-style = bar
+adjust-cursor-thickness = 3
+adjust-cell-height = 15%
 
 # platform specific configs
 config-file = ?./config.local

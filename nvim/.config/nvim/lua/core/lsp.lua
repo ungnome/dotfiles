@@ -9,6 +9,7 @@ vim.lsp.enable({
     "bashls",
     "cssls",
     "emmet_language_server",
+    "gopls",
     "html",
     "jsonls",
     "marksman",

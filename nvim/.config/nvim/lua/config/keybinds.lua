@@ -22,6 +22,7 @@ map("n", "<leader>m", ":Mason<cr>", { desc = "Mason", silent = true })
 -- code
 map("n", "<F2>", function() lsp.buf.rename() end, { desc = "Rename Symbol", silent = true })
 map("n", "<F3>", function() require("conform").format() end, { desc = "Format Buffer", silent = false })
+map({ "n", "i", "s" }, "<C-s>", vim.lsp.buf.signature_help, { desc = "Show Signature help" })
 
 -- find
 map("n", "<leader>ff", function() picker.files({ hidden = true }) end, { desc = "Files (cwd)", silent = true })

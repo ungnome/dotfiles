@@ -6,12 +6,12 @@ return {
     opts = {
         keymap = { preset = "default" },
 
-        fuzzy = {
-            sorts = {
-                "kind",
-                "label",
-            },
-        },
+        -- fuzzy = {
+        --     sorts = {
+        --         "kind",
+        --         "label",
+        --     },
+        -- },
 
         appearance = {
             nerd_font_variant = "normal",

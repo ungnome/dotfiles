@@ -5,6 +5,7 @@ return {
         formatters_by_ft = {
             bash = { lsp_format = "prefer" },
             sh = { lsp_format = "prefer" },
+            go = { lsp_format = "prefer" },
             lua = { "stylua" },
             javascript = { "prettierd", "prettier", stop_after_first = true },
             typescript = { "prettierd", "prettier", stop_after_first = true },
