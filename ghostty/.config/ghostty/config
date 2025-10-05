@@ -3,7 +3,7 @@ font-family = "Hack"
 font-thicken = true
 
 # theme
-theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
 
 # window 
 window-width = 145

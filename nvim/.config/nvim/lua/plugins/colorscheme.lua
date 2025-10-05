@@ -11,6 +11,11 @@ return {
                 light = "latte",
                 dark = "mocha",
             },
+            color_overrides = {
+                mocha = {
+                    text = "#dce0e8",
+                },
+            },
             term_colorrs = true,
             dim_inactive = {
                 enable = true,
