@@ -13,9 +13,8 @@ return {
 
         which_key.add({
             { "<leader>f", desc = "+Find" },
-            { "<leader>g", desc = "+Git" },
             { "<leader>s", desc = "+Search" },
-            { "<leader>x", desc = "+Misc" },
+            { "<leader>u", desc = "+UI" },
         })
     end,
 }

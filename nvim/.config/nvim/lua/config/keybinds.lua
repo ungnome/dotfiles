@@ -32,8 +32,13 @@ map("n", "<leader>fb", function() picker.buffers() end, { desc = "Buffers", sile
 -- search
 map("n", "<leader>sg", function() picker.grep() end, { desc = "Grep", silent = true })
 map("n", "<leader>sh", function() picker.help() end, { desc = "Help", silent = true })
+map("n", "<leader>sk", function() picker.keymaps() end, { desc = "Keybinds", silent = true })
 map("n", "<leader>ss", function() picker.lsp_symbols() end, { desc = "Buffer Symbols", silent = true })
 map("n", "<leader>sS", function() picker.lsp_workspace_symbols() end, { desc = "Workspace Symbols", silent = true })
 
 -- diagnostics
 map("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
+
+-- UI
+map("n", "<leader>uc", ":NoNeckPain<cr>", { desc = "Toggle Center Buffer", silent = true })
+map("n", "<leader>ul", ":ToggleListCharacters<cr>", { desc = "Toggle list Characters", silent = true })

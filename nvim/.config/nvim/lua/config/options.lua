@@ -25,7 +25,7 @@ opt.scrolloff = 10
 opt.sidescrolloff = 10
 opt.wrap = false
 opt.signcolumn = "yes"
-opt.listchars = "space:·,tab:>-"
+opt.listchars = "space:·,tab:> ,eol:$"
 
 -- completion menu
 opt.completeopt = "menu,menuone,preview,noinsert"

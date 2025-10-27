@@ -26,6 +26,7 @@ return {
             "yaml-language-server",
             "eslint_d",
             "prettierd",
+            "gopls",
         }
 
         local installed = require("mason-registry").get_installed_package_names()

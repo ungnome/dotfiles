@@ -1,6 +1,6 @@
 require("config.options")
-require("core.lazy")
-require("core.lsp")
+require("config.lazy")
+require("config.lsp")
 require("config.keybinds")
 require("config.autocmds")
-
+require("config.usercmds")
