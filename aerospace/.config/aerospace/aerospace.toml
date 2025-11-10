@@ -214,7 +214,7 @@ alt-shift-l = ['join-with right', 'mode main']
 #############################
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = ['move-node-to-workspace 1']
+run = ['layout floating' , 'move-node-to-workspace 1']
 
 ##############################
 # 2 - web browsers
@@ -240,11 +240,11 @@ run = ['move-node-to-workspace 2']
 ##############################
 [[on-window-detected]]
 if.app-id = "org.whispersystems.signal-desktop"
-run = ['layout floating', 'move-node-to-workspace 3']
+run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
 if.app-id = "com.apple.MobileSMS"
-run = ['layout floating', 'move-node-to-workspace 3']
+run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
 if.app-id = "com.hnc.Discord"
@@ -262,23 +262,33 @@ if.app-id = "com.apple.iCal"
 run = ['move-node-to-workspace 4']
 
 ##############################
-# 5 - notes
+# 5 - notes, todo
 ##############################
 [[on-window-detected]]
 if.app-id = "md.obsidian"
 run = ['move-node-to-workspace 5']
 
 ##############################
-# always aloating
+# 6 - media players
 ##############################
 [[on-window-detected]]
-if.app-id = "com.tidal.desktop"
-run = ['layout floating']
+if.app-id = "com.electron.pocket-casts"
+run = ['move-node-to-workspace 6']
 
 [[on-window-detected]]
-if.app-id = "com.electron.pocket-casts"
-run = ['layout floating']
+if.app-id = "com.spotify.client"
+run = ['move-node-to-workspace 6']
 
+##############################
+# 10 - conferencing
+##############################
+[[on-window-detected]]
+if.window-title-regex-substring = "^Zoom Workspace"
+run = ['layout floatig', 'move-node-to-workspace 10']
+
+##############################
+# always aloating
+##############################
 [[on-window-detected]]
 if.app-id = "com.apple.finder"
 run = ['layout floating']
@@ -288,13 +298,17 @@ if.app-id = "com.apple.AddressBook"
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id = "com.todoist.mac.Todoist"
-run = ['layout floating']
-
-[[on-window-detected]]
 if.app-id = "com.bitwarden.desktop"
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id = "org.godotengine.godot"
+if.app-id = "com.apple.Preview"
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = "com.todoist.mac.Todoist"
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = "com.apple.ActivityMonitor"
 run = ['layout floating']

@@ -11,13 +11,6 @@ return {
 
         picker = {
             enabled = true,
-            layout = {
-                preset = "default",
-                layout = {
-                    width = 0.95,
-                    height = 0.95,
-                },
-            },
             win = {
                 input = {
                     keys = {
