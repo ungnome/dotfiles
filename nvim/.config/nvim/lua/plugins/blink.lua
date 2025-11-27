@@ -1,6 +1,6 @@
 return {
     "saghen/blink.cmp",
-    -- enabled = false,
+    enabled = true,
     version = "1.*",
     dependencies = { { "echasnovski/mini.nvim" } },
     opts = {
