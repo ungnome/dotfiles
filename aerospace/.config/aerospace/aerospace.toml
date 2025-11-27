@@ -283,8 +283,8 @@ run = ['move-node-to-workspace 6']
 # 10 - conferencing
 ##############################
 [[on-window-detected]]
-if.window-title-regex-substring = "^Zoom Workspace"
-run = ['layout floatig', 'move-node-to-workspace 10']
+if.window-title-regex-substring = "^Zoom Workplace"
+run = ['layout floating', 'move-node-to-workspace 10']
 
 ##############################
 # always aloating
