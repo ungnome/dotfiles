@@ -37,7 +37,7 @@ map("n", "<leader>ss", function() picker.lsp_symbols() end, { desc = "Buffer Sym
 map("n", "<leader>sS", function() picker.lsp_workspace_symbols() end, { desc = "Workspace Symbols", silent = true })
 
 -- diagnostics
-map("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
+map("n", "<leader>x", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
 
 -- UI
 map("n", "<leader>uc", ":NoNeckPain<cr>", { desc = "Toggle Center Buffer", silent = true })

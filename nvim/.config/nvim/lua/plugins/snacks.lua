@@ -11,6 +11,9 @@ return {
 
         picker = {
             enabled = true,
+            layout = {
+                preset = "telescope",
+            },
             win = {
                 input = {
                     keys = {

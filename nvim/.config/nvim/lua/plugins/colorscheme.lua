@@ -1,9 +1,9 @@
 return {
     "catppuccin/nvim",
     name = "catppuccin",
-    -- enabled = true,
     lazy = false,
     priority = 1000,
+    branch = "main",
     config = function()
         require("catppuccin").setup({
             flavour = "auto",
@@ -23,18 +23,7 @@ return {
                 percentage = 0.30,
             },
             show_end_of_buffer = true,
-            integrations = {
-                blink_cmp = {
-                    style = "bordered",
-                },
-                treesitter = true,
-                mason = true,
-                mini = true,
-                which_key = true,
-                snacks = {
-                    enabled = true,
-                },
-            },
+            auto_integrations = true,
             custom_highlights = function(colors)
                 return {
                     Comment = { fg = colors.overlay1 },
