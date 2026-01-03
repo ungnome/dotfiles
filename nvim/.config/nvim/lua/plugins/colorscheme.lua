@@ -13,10 +13,12 @@ return {
             },
             color_overrides = {
                 mocha = {
-                    text = "#dce0e8",
+                    base = "#1e1e1e",
+                    mantle = "#1a1a1a",
+                    crust = "#171717"
                 },
             },
-            term_colorrs = true,
+            term_colors = true,
             dim_inactive = {
                 enable = true,
                 shade = "dark",
@@ -28,7 +30,7 @@ return {
                 return {
                     Comment = { fg = colors.overlay1 },
                     LineNr = { fg = colors.overlay1 },
-                    ["@tag.attribute"] = { fg = colors.yellow },
+                    ["@tag.attribute"] = { fg = colors.peach },
 
                     -- -- blink.cmp
                     BlinkCmpMenu = { bg = colors.base },
