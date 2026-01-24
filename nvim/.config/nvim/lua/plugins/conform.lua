@@ -7,6 +7,7 @@ return {
             sh = { lsp_format = "prefer" },
             go = { lsp_format = "prefer" },
             lua = { "stylua" },
+            markdown = { "prettierd", "prettier", stop_after_first = true },
             javascript = { "prettierd", "prettier", stop_after_first = true },
             typescript = { "prettierd", "prettier", stop_after_first = true },
             yaml = { "prettierd", "prettier", stop_after_first = true },

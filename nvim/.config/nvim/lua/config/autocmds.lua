@@ -24,5 +24,5 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     pattern = "*.tf",
-    command = "setlocal commentstring=#%s",
+    command = "setlocal commentstring=#%s; | set ft=terraform",
 })
