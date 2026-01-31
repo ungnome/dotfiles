@@ -36,6 +36,10 @@ if [[ $(uname) == "Darwin" ]]; then
     if [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]]; then
         source "/usr/local/etc/profile.d/bash_completion.sh"
     fi
+else
+    if [[ -r "/usr/share/bash-completion/bash_completion" ]]; then
+        source "/usr/share/bash-completion/bash_completion"
+    fi
 fi
 
 # ------------------------------------------------------------------------------
