@@ -287,9 +287,6 @@ run = ['move-node-to-workspace 6']
 if.app-id = "com.spotify.client"
 run = ['move-node-to-workspace 6']
 
-[[on-window-detected]]
-if.app-id = "com.tidal.desktop"
-run = ['move-node-to-workspace 6']
 
 ##############################
 # 10 - conferencing
@@ -319,6 +316,10 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = "com.todoist.mac.Todoist"
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = "com.tidal.desktop"
 run = ['layout floating']
 
 [[on-window-detected]]
