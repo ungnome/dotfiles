@@ -15,6 +15,7 @@ vim.lsp.enable({
     "terraformls",
     "ts_ls",
     "yamlls",
+    "ty",
 })
 
 vim.diagnostic.config({

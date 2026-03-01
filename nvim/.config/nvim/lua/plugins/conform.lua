@@ -15,6 +15,7 @@ return {
             jsonc = { "prettierd", "prettier", stop_after_first = true },
             svelte = { "prettierd", "prettier", stop_after_first = true },
             terraform = { lsp_format = "prefer" },
+            python = { "ruff_format" },
         },
     },
 }

@@ -8,6 +8,11 @@ return {
     dependencies = {
         "windwp/nvim-ts-autotag",
         "nvim-treesitter/nvim-treesitter-textobjects",
+        {
+            "ravsii/tree-sitter-d2",
+            version = "*", -- use the latest git tag instead of main
+            build = "make nvim-install",
+        },
     },
     opts = {
         highlight = {
@@ -19,6 +24,7 @@ return {
         ensure_installed = {
             "bash",
             "css",
+            "d2",
             "go",
             "hcl",
             "html",
@@ -45,7 +51,5 @@ return {
             enable = true,
         },
     },
-    config = function(_, opts)
-        require("nvim-treesitter.configs").setup(opts)
-    end,
+    config = function(_, opts) require("nvim-treesitter.configs").setup(opts) end,
 }
