@@ -216,6 +216,10 @@ alt-shift-l = ['join-with right', 'mode main']
 if.app-id = 'com.mitchellh.ghostty'
 run = ['layout floating' , 'move-node-to-workspace 1']
 
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = [ 'move-node-to-workspace 1']
+
 ##############################
 # 2 - web browsers
 ##############################
@@ -255,38 +259,30 @@ if.app-id = "com.tinyspeck.slackmacgap"
 run = ['move-node-to-workspace 3']
 
 ##############################
-# 4 - email, calendar
-##############################
-[[on-window-detected]]
-if.app-id = "com.apple.mail"
-run = ['move-node-to-workspace 4']
-
-[[on-window-detected]]
-if.app-id = "com.apple.iCal"
-run = ['move-node-to-workspace 4']
-
-[[on-window-detected]]
-if.app-id = "com.microsoft.Outlook"
-run = ['move-node-to-workspace 4']
-
-##############################
-# 5 - notes, todo
+# 4 - notes, todo
 ##############################
 [[on-window-detected]]
 if.app-id = "md.obsidian"
-run = ['move-node-to-workspace 5']
+run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-id = "com.todoist.mac.Todoist"
+run = ['layout floating', 'move-node-to-workspace 4']
 
 ##############################
-# 6 - media players
+# 5 - media players
 ##############################
 [[on-window-detected]]
 if.app-id = "com.electron.pocket-casts"
-run = ['move-node-to-workspace 6']
+run = ['move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-id = "com.spotify.client"
-run = ['move-node-to-workspace 6']
+run = ['move-node-to-workspace 5']
 
+[[on-window-detected]]
+if.app-id = "com.tidal.desktop"
+run = ['move-node-to-workspace 5']
 
 ##############################
 # 10 - conferencing
@@ -312,14 +308,6 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = "com.apple.Preview"
-run = ['layout floating']
-
-[[on-window-detected]]
-if.app-id = "com.todoist.mac.Todoist"
-run = ['layout floating']
-
-[[on-window-detected]]
-if.app-id = "com.tidal.desktop"
 run = ['layout floating']
 
 [[on-window-detected]]
