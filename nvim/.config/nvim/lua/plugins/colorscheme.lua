@@ -12,11 +12,11 @@ return {
                 dark = "mocha",
             },
             color_overrides = {
-                mocha = {
-                    base = "#1E1E1E",
-                    mantle = "#1a1a1a",
-                    crust = "#171717"
-                },
+                -- mocha = {
+                --     base = "#1E1E1E",
+                --     mantle = "#1a1a1a",
+                --     crust = "#171717"
+                -- },
             },
             term_colors = true,
             dim_inactive = {
