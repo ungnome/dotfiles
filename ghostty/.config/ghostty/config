@@ -13,7 +13,8 @@ window-height = 50
 shell-integration-features = no-cursor
 cursor-style = bar
 adjust-cursor-thickness = 3
-adjust-cell-height = 15%
 
 # platform specific configs
 config-file = ?./config.local
+
+macos-option-as-alt = true
