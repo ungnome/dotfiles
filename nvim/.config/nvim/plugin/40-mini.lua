@@ -1,6 +1,6 @@
-vim.pack.add({
-    { src = "https://github.com/nvim-mini/mini.nvim" },
-})
+-- vim.pack.add({
+--     { src = "https://github.com/nvim-mini/mini.nvim" },
+-- })
 
 -- center pick window on screen
 local pick_win_config = function()

@@ -9,10 +9,10 @@ vim.api.nvim_create_autocmd("PackChanged", {
     end,
 })
 
-vim.pack.add({
-    { src = "https://github.com/nvim-lua/plenary.nvim" },
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
-})
+-- vim.pack.add({
+--     { src = "https://github.com/nvim-lua/plenary.nvim" },
+--     { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+-- })
 
 local ts_filetypes = {
     "bash",

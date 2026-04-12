@@ -3,6 +3,7 @@
 -------------------------------------------------------------------------------
 vim.cmd("source ~/.vimrc")
 
+
 -------------------------------------------------------------------------------
 -- local vars for use later on
 -------------------------------------------------------------------------------
@@ -10,6 +11,22 @@ local opt = vim.opt
 local global = vim.g
 local map = vim.keymap.set
 local lsp = vim.lsp
+
+-------------------------------------------------------------------------------
+-- install plugins
+-------------------------------------------------------------------------------
+vim.pack.add({
+    { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
+    { src = "https://github.com/nvim-lua/plenary.nvim" },
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+    { src = "https://github.com/neovim/nvim-lspconfig" },
+    { src = "https://github.com/mason-org/mason.nvim" },
+    { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
+    { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
+    { src = "https://github.com/stevearc/conform.nvim" },
+    { src = "https://github.com/nvim-mini/mini.nvim" },
+    { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.x") },
+})
 
 -------------------------------------------------------------------------------
 -- options
