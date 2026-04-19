@@ -1,41 +1,102 @@
 -------------------------------------------------------------------------------
--- load options supported in both vim and neovim from vimrc
--------------------------------------------------------------------------------
-vim.cmd("source ~/.vimrc")
-
-
--------------------------------------------------------------------------------
 -- local vars for use later on
 -------------------------------------------------------------------------------
 local opt = vim.opt
-local global = vim.g
 local map = vim.keymap.set
 local lsp = vim.lsp
 
 -------------------------------------------------------------------------------
--- install plugins
--------------------------------------------------------------------------------
-vim.pack.add({
-    { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
-    { src = "https://github.com/nvim-lua/plenary.nvim" },
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
-    { src = "https://github.com/neovim/nvim-lspconfig" },
-    { src = "https://github.com/mason-org/mason.nvim" },
-    { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
-    { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
-    { src = "https://github.com/stevearc/conform.nvim" },
-    { src = "https://github.com/nvim-mini/mini.nvim" },
-    { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.x") },
-})
-
--------------------------------------------------------------------------------
 -- options
 -------------------------------------------------------------------------------
-opt.winborder = "single"
+-- indentation
+opt.autoindent = true
+opt.smartindent = true
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.shiftround = true
+opt.expandtab = true
+
+-- cursor and position indicators
+opt.cursorline = true
+opt.colorcolumn = "100"
+opt.mouse = "a"
+opt.number = true
+opt.relativenumber = true
+
+-- context
+opt.scrolloff = 10
+opt.sidescrolloff = 10
+opt.wrap = false
+opt.signcolumn = "yes"
+opt.listchars = "space:·,tab:> ,eol:$"
+
+-- menu
+opt.completeopt = "menu,menuone,preview,noinsert"
+opt.wildmenu = true
+opt.wildoptions = "pum"
+
+-- confirm before closing buffer
+opt.confirm = true
+
+-- search and spelling
+opt.ignorecase = true
+opt.smartcase = true
+opt.spelllang = "en"
+opt.hlsearch = true
+opt.incsearch = true
+
+-- split behavior
+opt.splitbelow = true
+opt.splitright = true
+
+-- colors
+opt.termguicolors = true
+
+-- only in 0.11+
+nv = vim.version()
+if nv.major >= 0 and nv.minor >= 11 then opt.winborder = "single" end
+
+-------------------------------------------------------------------------------
+-- install plugins
+-------------------------------------------------------------------------------
+-- only load plugins if running locally
+if not vim.env.SSH_TTY then
+    vim.pack.add({
+        { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
+        { src = "https://github.com/nvim-lua/plenary.nvim" },
+        { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+        { src = "https://github.com/neovim/nvim-lspconfig" },
+        { src = "https://github.com/mason-org/mason.nvim" },
+        { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
+        { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
+        { src = "https://github.com/stevearc/conform.nvim" },
+        { src = "https://github.com/nvim-mini/mini.nvim" },
+        { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.x") },
+    })
+end
 
 -------------------------------------------------------------------------------
 -- keymaps
 -------------------------------------------------------------------------------
+-- move up/down by display lines, handles wrapped lines better
+map("n", "j", "gj")
+map("n", "k", "gk")
+
+-- CTRL+[h|j|k|l] to switch windows in normal mode
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+
+-- clear search highlights with ESC
+map("n", "<ESC>", ":noh<CR><ESC>", { silent = true })
+
+-- ALT+[h,j,k,l] to resize windows in normal mode
+map("n", "<A-l>", "<C-w>>")
+map("n", "<A-h>", "<C-w><")
+map("n", "<A-k>", "<C-w>+")
+map("n", "<A-j>", "<C-w>-")
+
 -- files
 map("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "File Explorer", silent = true })
 
@@ -64,14 +125,12 @@ map("n", "<leader>x", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
 -------------------------------------------------------------------------------
 -- autocmds
 -------------------------------------------------------------------------------
--- Highlight on yank 
+-- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
     group = vim.api.nvim_create_augroup("highlight_yank", {}),
     desc = "Hightlight selection on yank",
     pattern = "*",
-    callback = function()
-        vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
-    end,
+    callback = function() vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 }) end,
 })
 
 -- use tree-sitter highlighting rather than lsp
@@ -92,4 +151,3 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     pattern = "*.tf",
     command = "setlocal commentstring=#%s; | set ft=terraform",
 })
-
