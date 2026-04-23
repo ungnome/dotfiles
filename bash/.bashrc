@@ -76,7 +76,7 @@ get_prompt() {
     [[ -n $branch_status ]] && PS1+="${CLRS[red]}(!)${CLRS[reset]}"
     
     # aws-vault profile
-    [[ -n $AWS_VAULT ]] && PS1+=" ${CLRS[yellow]}(aws: ${AWS_VAULT})${CLRS[reset]}}"
+    [[ -n $AWS_VAULT ]] && PS1+=" ${CLRS[yellow]}(aws: ${AWS_VAULT})${CLRS[reset]}"
 
     # python venv
     [[ -n $VIRTUAL_ENV_PROMPT ]] && PS1+=" ${CLRS[yellow]}(pyenv: ${VIRTUAL_ENV_PROMPT})${CLRS[reset]}"
