@@ -10,6 +10,7 @@ export EDITOR="$VISUAL"
 export PAGER=less
 export KITTY_HOST_OS=$(uname)
 export SYSTEMD_PAGER=
+export RIPGREP_CONFIG_PATH=$HOME/.config/ripgreprc
 
 # ------------------------------------------------------------------------------
 # PATH
@@ -36,6 +37,10 @@ if [[ $(uname) == "Darwin" ]]; then
     if [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]]; then
         source "/usr/local/etc/profile.d/bash_completion.sh"
     fi
+
+    # aliases
+    alias pico8="~/Applications/PICO-8.app/Contents/MacOS/pico8 -home ~/git/ungnome/pico8/"
+
 else
     if [[ -r "/usr/share/bash-completion/bash_completion" ]]; then
         source "/usr/share/bash-completion/bash_completion"
