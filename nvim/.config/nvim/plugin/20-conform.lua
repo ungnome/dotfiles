@@ -18,5 +18,6 @@ require("conform").setup({
         terraform = { lsp_format = "prefer" },
         python = { "ruff_format" },
         xml = { "xmlformatter" },
+        pico8lua = { "stylua" },
     },
 })

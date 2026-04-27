@@ -33,7 +33,14 @@ local ts_filetypes = {
     "yaml",
 }
 
+-- install parsers
 require("nvim-treesitter").install(ts_filetypes)
+
+-- PICO-8
+table.insert(ts_filetypes, "pico8")
+table.insert(ts_filetypes, "pico8lua")
+vim.treesitter.language.register("lua", "pico8")
+vim.treesitter.language.register("lua", "pico8lua")
 
 vim.api.nvim_create_autocmd("FileType", {
     pattern = ts_filetypes,

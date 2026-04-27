@@ -123,6 +123,18 @@ map("n", "<leader>n", function() MiniNotify.show_history() end, { desc = "Notifi
 map("n", "<leader>x", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
 
 -------------------------------------------------------------------------------
+-- filetypes
+-------------------------------------------------------------------------------
+vim.filetype.add({
+    extension = {
+        p8 = "pico8",
+        p8l = "pico8lua",
+        sls = "saltstack",
+        tf = "terraform",
+    },
+})
+
+-------------------------------------------------------------------------------
 -- autocmds
 -------------------------------------------------------------------------------
 -- Highlight on yank
@@ -147,6 +159,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     command = "set ft=salt expandtab shiftwidth=2 tabstop=2",
 })
 
+-- Terraform
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     pattern = "*.tf",
     command = "setlocal commentstring=#%s; | set ft=terraform",

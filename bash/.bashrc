@@ -39,7 +39,7 @@ if [[ $(uname) == "Darwin" ]]; then
     fi
 
     # aliases
-    alias pico8="~/Applications/PICO-8.app/Contents/MacOS/pico8 -home ~/git/ungnome/pico8/"
+    alias pico8="~/Applications/PICO-8.app/Contents/MacOS/pico8 -root_path $HOME/git/ungnome/pico8/carts/"
 
 else
     if [[ -r "/usr/share/bash-completion/bash_completion" ]]; then
