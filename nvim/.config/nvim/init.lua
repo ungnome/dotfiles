@@ -112,7 +112,7 @@ map("n", "<leader>fg", ":Pick git_files<CR>", { desc = "Files (git)", silent = t
 map("n", "<leader>fb", ":Pick buffers<CR>", { desc = "Buffers", silent = true })
 
 -- search
-map("n", "<leader>sg", ":Pick grep<CR>", { desc = "Grep", silent = true })
+map("n", "<leader>sg", ":Pick grep_live<CR>", { desc = "Grep", silent = true })
 map("n", "<leader>sh", ":Pick help<CR>", { desc = "Help", silent = true })
 map("n", "<leader>sk", ":Pick keymaps<CR>", { desc = "Keybinds", silent = true })
 map("n", "<leader>ss", ":Pick lsp scope='document_symbol'<CR>", { desc = "Buffer Symbols", silent = true })
@@ -128,7 +128,7 @@ map("n", "<leader>x", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
 vim.filetype.add({
     extension = {
         p8 = "pico8",
-        p8l = "pico8lua",
+        p8lua = "pico8lua",
         sls = "saltstack",
         tf = "terraform",
     },

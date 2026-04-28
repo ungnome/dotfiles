@@ -56,9 +56,3 @@ vim.lsp.config("lua_ls", {
         },
     },
 })
-
-vim.lsp.config("stylua", {
-    cmd = { "stylua", "--lsp" },
-    filetypes = { "lua", "pico8ua" },
-    root_markers = { ".stylua.toml", "stylua.toml", ".editorconfig" },
-})
